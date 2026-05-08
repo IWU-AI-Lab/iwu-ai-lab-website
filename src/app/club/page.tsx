@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Calendar, Code, Users } from "lucide-react";
+import { FaArrowRight, FaCalendar, FaCode, FaUsers } from "react-icons/fa6";
 
 export default function ClubPortal() {
   return (
@@ -21,7 +21,7 @@ export default function ClubPortal() {
           {/* Feature 1 */}
           <div className="bg-white dark:bg-zinc-900 border border-iwu-light-grey/20 rounded-xl p-8 shadow-sm">
             <div className="w-12 h-12 bg-iwu-spirit/10 rounded-lg flex items-center justify-center text-iwu-spirit mb-6">
-              <Code size={24} />
+              <FaCode size={24} />
             </div>
             <h2 className="text-2xl font-tungsten uppercase tracking-wide mb-3">Workshops</h2>
             <p className="text-iwu-dark-grey text-sm font-gotham mb-4">
@@ -32,7 +32,7 @@ export default function ClubPortal() {
           {/* Feature 2 */}
           <div className="bg-white dark:bg-zinc-900 border border-iwu-light-grey/20 rounded-xl p-8 shadow-sm">
             <div className="w-12 h-12 bg-iwu-spirit/10 rounded-lg flex items-center justify-center text-iwu-spirit mb-6">
-              <Users size={24} />
+              <FaUsers size={24} />
             </div>
             <h2 className="text-2xl font-tungsten uppercase tracking-wide mb-3">Community</h2>
             <p className="text-iwu-dark-grey text-sm font-gotham mb-4">
@@ -43,7 +43,7 @@ export default function ClubPortal() {
           {/* Feature 3 */}
           <div className="bg-white dark:bg-zinc-900 border border-iwu-light-grey/20 rounded-xl p-8 shadow-sm">
             <div className="w-12 h-12 bg-iwu-spirit/10 rounded-lg flex items-center justify-center text-iwu-spirit mb-6">
-              <Calendar size={24} />
+              <FaCalendar size={24} />
             </div>
             <h2 className="text-2xl font-tungsten uppercase tracking-wide mb-3">Events</h2>
             <p className="text-iwu-dark-grey text-sm font-gotham mb-4">
@@ -61,7 +61,7 @@ export default function ClubPortal() {
             The club is open to all IWU students, regardless of major or prior coding experience.
           </p>
           <Link href="/join" className="inline-flex items-center gap-2 px-8 py-3 bg-iwu-spirit text-white font-bold rounded hover:bg-iwu-red transition-colors">
-            Become a Member <ArrowRight size={18} />
+            Become a Member <FaArrowRight size={18} />
           </Link>
         </div>
       </section>

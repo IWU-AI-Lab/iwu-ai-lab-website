@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Globe } from "lucide-react";
+import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope, FaGlobe } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -13,14 +13,14 @@ export default function Footer() {
             Pioneering artificial intelligence research, education, and student engagement at Indiana Wesleyan University.
           </p>
           <div className="flex gap-4 text-iwu-light-grey">
-            <a href="#" className="hover:text-white transition-colors flex items-center gap-2 text-sm" aria-label="Instagram">
-              Instagram
+            <a href="#" className="hover:text-white transition-colors" aria-label="Instagram">
+              <FaInstagram size={20} />
             </a>
-            <a href="#" className="hover:text-white transition-colors flex items-center gap-2 text-sm" aria-label="LinkedIn">
-              LinkedIn
+            <a href="#" className="hover:text-white transition-colors" aria-label="LinkedIn">
+              <FaLinkedin size={20} />
             </a>
-            <a href="#" className="hover:text-white transition-colors flex items-center gap-2 text-sm" aria-label="GitHub">
-              GitHub
+            <a href="#" className="hover:text-white transition-colors" aria-label="GitHub">
+              <FaGithub size={20} />
             </a>
           </div>
         </div>
@@ -53,11 +53,11 @@ export default function Footer() {
           <h3 className="font-gotham font-bold text-lg mb-4 text-iwu-light-grey">Contact Us</h3>
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-3 text-iwu-light-grey hover:text-white transition-colors">
-              <Globe size={16} />
+              <FaGlobe size={16} />
               <a href="https://www.indwes.edu" target="_blank" rel="noopener noreferrer">indwes.edu</a>
             </li>
             <li className="flex items-center gap-3 text-iwu-light-grey hover:text-white transition-colors">
-              <Mail size={16} />
+              <FaEnvelope size={16} />
               <a href="mailto:admin@example.com">admin@example.com</a>
             </li>
             <li className="mt-4 text-iwu-light-grey text-xs">

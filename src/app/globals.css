@@ -16,17 +16,17 @@
   --font-sans: var(--font-gotham);
 }
 
-:root {
+:root, :root.light {
   --background: #ffffff;
   --foreground: #000000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #111111;
-    --foreground: #ffffff;
-  }
+:root.dark {
+  --background: #111111;
+  --foreground: #ffffff;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 body {
   background: var(--background);
@@ -34,6 +34,14 @@ body {
   font-family: var(--font-gotham);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes spin-cw {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spin-ccw {
+  100% { transform: rotate(-360deg); }
 }
 
 h1 {
