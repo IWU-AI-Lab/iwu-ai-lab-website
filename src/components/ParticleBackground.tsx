@@ -18,7 +18,7 @@ export default function ParticleBackground() {
     let particles: Particle[] = [];
     
     // Config
-    const particleCount = 50;
+    const particleCount = 75;
     const connectionDistance = 150;
     const mouseRadius = 100;
     
