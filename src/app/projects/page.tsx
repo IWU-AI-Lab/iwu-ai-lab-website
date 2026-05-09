@@ -10,13 +10,13 @@ import { PROJECTS_DATA, Project } from "@/lib/placeholder-data";
 export default function ProjectsPage() {
   const [filterStatus, setFilterStatus] = useState<string>("all");
 
-  const filteredProjects = filterStatus === "all" 
-    ? PROJECTS_DATA 
+  const filteredProjects = filterStatus === "all"
+    ? PROJECTS_DATA
     : PROJECTS_DATA.filter(p => p.status === filterStatus);
 
   // Helper to render correct status badge
   const renderStatusBadge = (status: Project["status"]) => {
-    switch(status) {
+    switch (status) {
       case "ongoing":
         return (
           <span className="absolute top-4 right-4 flex items-center gap-1.5 px-3 py-1 bg-iwu-action text-white text-xs font-bold uppercase rounded-full shadow-md z-10">
@@ -41,17 +41,17 @@ export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-transparent py-16">
       <div className="container mx-auto px-4">
-        
+
         {/* Header Section */}
         <div className="mb-12 border-b border-iwu-light-grey/20 pb-8">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-6xl font-tungsten uppercase text-foreground mb-4"
           >
-            Our <span className="text-iwu-red">Research Projects</span>
+            Our <span className="text-iwu-red">Projects</span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -65,7 +65,7 @@ export default function ProjectsPage() {
         <div className="flex justify-end mb-8">
           <div className="flex items-center gap-3">
             <span className="font-gotham text-sm font-bold text-iwu-dark-grey uppercase">Filter by Status:</span>
-            <select 
+            <select
               value={filterStatus}
               onChange={(e) => setFilterStatus(e.target.value)}
               className="px-4 py-2 bg-white dark:bg-zinc-800 border border-iwu-light-grey/30 rounded shadow-sm font-gotham text-sm focus:outline-none focus:ring-2 focus:ring-iwu-action"
@@ -82,7 +82,7 @@ export default function ProjectsPage() {
         {filteredProjects.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, idx) => (
-              <motion.div 
+              <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -94,11 +94,11 @@ export default function ProjectsPage() {
                 <div className="relative h-[200px] w-full bg-iwu-light-grey/10 flex items-center justify-center overflow-hidden">
                   {renderStatusBadge(project.status)}
                   {project.image ? (
-                    <Image 
-                      src={project.image} 
-                      alt={project.title} 
-                      fill 
-                      className="object-cover transition-transform duration-500 group-hover:scale-105" 
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   ) : (
                     <FaImage size={48} className="text-iwu-light-grey/40" />
@@ -111,12 +111,12 @@ export default function ProjectsPage() {
                   <p className="font-gotham text-sm text-foreground/80 mb-6 flex-grow line-clamp-3">
                     {project.description}
                   </p>
-                  
+
                   {/* Team Members */}
                   <div className="flex items-start gap-2 mb-6">
                     <FaUsers className="text-iwu-red mt-1 flex-shrink-0" size={14} />
                     <span className="font-gotham text-xs text-iwu-dark-grey leading-relaxed">
-                      {project.teamMembers.length > 3 
+                      {project.teamMembers.length > 3
                         ? `${project.teamMembers.slice(0, 3).join(", ")} +${project.teamMembers.length - 3} more`
                         : project.teamMembers.join(", ")
                       }
