@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import ParticleBackground from "./ParticleBackground";
 import AnimatedRing, { RING_FADE_DURATION, RING_DRAW_DURATION } from "./AnimatedRing";
 import {
   FaLaptopCode,
@@ -43,8 +42,6 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full min-h-[85vh] flex items-center overflow-hidden bg-background py-20">
-      <ParticleBackground />
-
       <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center gap-12">
         {/* Hero Text (Left side on Desktop) */}
         <div className="w-full md:w-1/2 text-center md:text-left">

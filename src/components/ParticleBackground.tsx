@@ -135,9 +135,9 @@ export default function ParticleBackground() {
     };
 
     const handleResize = () => {
-      // Set actual size in memory (scaled to account for extra pixel density)
-      canvas.width = canvas.parentElement!.clientWidth;
-      canvas.height = canvas.parentElement!.clientHeight;
+      // Set actual size to full window
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
       init();
     };
 
@@ -166,7 +166,7 @@ export default function ParticleBackground() {
   return (
     <canvas 
       ref={canvasRef} 
-      className="absolute inset-0 pointer-events-none z-0"
+      className="fixed inset-0 w-full h-full pointer-events-none z-0"
     />
   );
 }
