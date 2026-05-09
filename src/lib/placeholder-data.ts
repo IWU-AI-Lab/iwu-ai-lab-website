@@ -1,3 +1,16 @@
+/**
+ * ============================================================================
+ * PLACEHOLDER DATA: HOW TO EDIT
+ * ============================================================================
+ * This file contains DUMMY PLACEHOLDER data to scaffold the UI.
+ * 
+ * To update the website with real data, simply replace the contents of these 
+ * arrays with real information. Ensure that you adhere to the property names 
+ * (like 'title', 'description', 'status', etc.) exactly as defined above.
+ * ============================================================================
+ */
+
+/* Data type guides: DO NOT EDIT THESE TYPES */
 export type Project = {
   id: string;
   title: string;
@@ -26,17 +39,8 @@ export type Person = {
     linkedin?: string;
   };
 };
-/**
- * ============================================================================
- * PLACEHOLDER DATA: HOW TO EDIT
- * ============================================================================
- * This file contains DUMMY PLACEHOLDER data to scaffold the UI.
- * 
- * To update the website with real data, simply replace the contents of these 
- * arrays with real information. Ensure that you adhere to the property names 
- * (like 'title', 'description', 'status', etc.) exactly as defined above.
- * ============================================================================
- */
+
+/* Real data: Replace these placeholders with real information */
 export const PROJECTS_DATA: Project[] = [
   // LIMIT: Keep description to roughly 150-300 characters to ensure the cards remain a consistent height.
   {
@@ -72,6 +76,7 @@ export const PROJECTS_DATA: Project[] = [
     tags: ["Ethics", "Bias"],
   }
 ];
+
 export const PEOPLE_DATA: Person[] = [
   // LIMIT: Keep quote under 100 characters.
   {
